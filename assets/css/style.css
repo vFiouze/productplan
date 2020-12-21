@@ -1,0 +1,312 @@
+
+@font-face {
+	font-family: Gilroy-Medium;
+	src: url('../otfs/Radomir Tinkov - Gilroy-Medium.otf');
+}
+@font-face {
+	font-family: Gilroy-Light;
+	src: url('../otfs/Gilroy-Light.ttf');
+}
+@font-face {
+	font-family: Gilroy-Regular;
+	src: url('../otfs/Gilroy-Regular.ttf');
+}
+
+
+html, body {
+	/*background-color: lightgrey;*/
+	font-family: Gilroy-Regular;
+	margin-left: 20px;
+}
+
+.main {
+	
+
+}
+.header{
+	display: flex;
+	height: 50px;
+	align-items: center;
+}
+.logo{
+	width: 10%;
+	padding-right: 20px;
+	border-right: 1px solid rgb(228,230,232);
+	border-bottom: 1px solid rgb(228,230,232);
+}
+.candidat-roadmap{
+	width:85%;
+	border-bottom: 1px solid rgb(228,230,232);
+	padding-left: 20px;
+	font-size: 15px;
+}
+.container {
+	background-color: rgb(228,230,232);
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	border-top: solid 1px black;
+	
+}
+.right-side {
+	width: 20%;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+}
+
+.map{
+	/*display: flex;*/
+	width: 100%;
+	/*margin-left: 10%;
+	margin-right: 10%;*/
+
+
+}
+h2 {
+	width: 20%;
+	color: rgb(125,128,131);
+	font-size: 20px;
+	height: 20px;
+	text-align: center;
+	height: 100%
+}
+.top{
+	display: flex;
+	align-items: flex-end;
+	background-color: white;
+	/*border-bottom: solid 1px black;*/
+	width: 100%;
+	position: relative;
+/*margin-right:30%;*/
+
+}
+.title {
+	width: 30%
+}
+.subtitle {
+	width: 70%;
+	display: flex;
+	justify-content: flex-end;
+	/*align-items: flex-end;*/
+	height: 100%;
+	margin-right: 20%;
+	/*position: absolute;*/
+	bottom: 0px;
+
+}
+.subtitle>span {
+	
+	width: 20%;
+}
+li>h2{
+	width: 100%;
+	text-align: right;
+	margin:0;
+	height: 100%;
+	vertical-align: middle;
+}
+.roadmap {
+	border-bottom: solid rgb(55,113,181) 5px;
+	margin-bottom: 5px
+}
+
+.right-side>.button {
+	/*border: 1px solid black;*/
+	border-radius: 2px;
+	background-color: lightgrey;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	padding: 10px;
+}
+ul {
+	list-style-type: none;
+	display: flex;
+	width: 70%;
+	margin:0px;
+	flex-direction: row-reverse;
+}
+li {
+	padding-left:20px;
+	display: flex;
+	align-items: center
+}
+
+.map-title{
+	display: flex;
+	width: 90%;
+	height: 7%;
+	margin-left: 7%;
+}
+.map-title>h2{
+	text-align: left;
+}
+.map-content{
+	display: flex;
+	height: 100%;
+	/*border:1px solid black;*/
+	height: 93%;
+	margin-left: 5%;
+
+}
+.drop{
+	width: 100%;
+	height: 160px;
+	overflow: hidden;
+	/*margin:10px;*/
+	/*display:none;*/
+	/*display: flex*/
+	display: grid;
+	grid-template-rows:60px repeat(2,50px);
+	grid-template-columns: repeat(12,1fr)
+	/*border: 1px dashed grey; 
+	background-color: white;*/
+
+}
+a {
+	display: block;
+	width: 100%
+}
+.drop-text {
+	/*width: 100%;*/
+	/*margin: 0;*/
+	text-align: center;
+	position:relative;
+	top: 50%;
+	grid-column: span 12;
+}
+.lane {
+	grid-column: span 12;
+	height: 100%;
+	background-color: rgb(222,105,64);
+	/*padding:5px;*/
+	/*margin: 10px;*/
+	/*flex-grow: 1;*/
+}
+.lane-text {
+	color: white;
+	margin-top: 0;
+	padding: 10px;
+}
+.break{
+	width: 100%;
+	height: 0px;
+}
+.dot{
+	display: flex;
+	justify-content:stretch;
+	margin-left: 7%;
+	width: 90%;
+}
+.month{
+	flex-grow: 1;
+	/*text-align:center;*/
+}
+.bar {
+	background-color: rgb(55,113,181);
+	/*grid-column: span 3;*/
+	/*position: relative;*/
+	border-radius: 3px;
+	margin: 5px;
+
+}
+.bar-text {
+	color:white;
+	margin-top: 5px;
+	padding: 2px;
+	position: relative;
+	top: 25%;
+	left: 10px;
+
+}
+.zone-guide{
+	border: 2px dashed black;
+	height: 20px;
+}
+.drop>*{
+	/*border-left: 2px solid black;*/
+}
+#lane-text{
+	color:white;
+}
+.fas.fa-caret-down {
+	color: white;
+	margin: 5px;
+}
+/*style the tooltip*/
+#tooltipBar,#tooltipLane{
+	display: none;
+	background-color: white;
+	border-radius: 2px;
+	border: 1px solid rgb(228,230,232);
+	padding: 15px;
+	width: 400px;
+	box-shadow: 5px grey
+}
+#tooltipBar[data-show] {
+  display: block;
+}
+#tooltip > h3 {
+	font-family: Gilroy-Medium;
+	font-size: 20px
+}
+#arrow,
+#arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  z-index: -1;
+  /*border: black 1px solid;*/
+}
+
+#arrow::before {
+  content: '';
+  transform: rotate(45deg);
+  background: white;
+  border-top: rgb(228,230,232) 2px solid;
+  border-right: rgb(228,230,232) 2px solid;
+}
+#tooltip[data-popper-placement^='top'] > #arrow {
+  bottom: -4px;
+
+}
+
+#tooltip[data-popper-placement^='bottom'] > #arrow {
+  top: -4px;
+
+}
+
+#tooltip[data-popper-placement^='left'] > #arrow {
+  right: -4px;
+
+}
+
+#tooltip[data-popper-placement^='right'] > #arrow {
+  left: -4px;
+
+}
+#gotit {
+	background-color: rgb(55,113,181);
+	color: white;
+	position: relative;
+	float : right;
+	width:20%;
+	padding: 10px;
+	border-radius: 5px;
+	/*pointer-events: stroke;*/
+	text-decoration: none;
+	text-align: center
+
+}
+.subtitle>h2{
+	margin: 0px
+}
+#lane-t{
+	color:white;
+	display: inline
+}
+.edit-text {
+	color:black !important;
+}
